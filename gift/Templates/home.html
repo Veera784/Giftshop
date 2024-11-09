@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1> MVK GIFTS</h1>
+
+<div class="row">
+    {% for gift in gift %}
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{gift.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ gift.name }}</h5>
+              <p class="card-text">Rs.{{ gift.price }}</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}
